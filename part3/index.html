@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>IP EXP 4 Part 3</title>
+  </head>
+  <body>
+    <h1>IP EXPERIMENT 4</h1>
+    <h2>Part 3</h2>
+    <p>To Create a student object and print the details in JavaScript.</p>
+    <p>Check the Console for Output</p>
+    <hr noshade="" />
+    <p>Input box for error test</p>
+    <input
+      id="error_checking"
+      type="text"
+      value=""
+      placeholder="Enter string or 0 for error"
+    />
+    <button type="submit" onclick="return checkError()">Submit</button>
+    <footer>
+      <p>Done by</p>
+      <p>Roll No 28</p>
+      <p>Mukul Kolpe</p>
+    </footer>
+  </body>
+  <script>
+    class Person {
+      constructor(name, class_name, roll_no) {
+        this.name = name;
+        this.class_name = class_name;
+        this.roll_no = roll_no;
+      }
+    }
+
+    class Student extends Person {
+      constructor(name, class_name, roll_no, college) {
+        super(name, class_name, roll_no);
+        this.college = college;
+      }
+    }
+
+    const student = new Student("Mukul Kolpe", "D15A", 28, "Vesit");
+    console.log("Student: ", student);
+
+    const checkError = () => {
+      const value = document.getElementById("error_checking").value;
+      console.log(value);
+      if (value > 0) {
+        console.log("Valid Roll number");
+      } else {
+        throw new Error("Invalid roll number");
+      }
+    };
+  </script>
+</html>

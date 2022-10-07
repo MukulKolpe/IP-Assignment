@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>IP EXP 4 Part 2</title>
+  </head>
+  <body>
+    <h1>IP EXPERIMENT 4</h1>
+    <h2>Part 2</h2>
+    <h2>Roll No 36</h2>
+  </body>
+  <script>
+    // Creating a Person Object
+    const person1 = {
+      name: "Mukul Kolpe",
+      class_name: "D15A",
+      roll_no: 28,
+      details: () => {
+        console.log(`name: ${person1.name}`);
+        console.log(`class: ${person1.class_name}`);
+        console.log(`roll no: ${person1.roll_no}`);
+      },
+    };
+    console.log("Person 1: ", person1);
+    person1.details();
+
+    class Person {
+      constructor(name, class_name, roll_no) {
+        this.name = name;
+        this.class_name = class_name;
+        this.roll_no = roll_no;
+      }
+    }
+
+    const person2 = new Person("Soham Kayal", "D15A", 24);
+    console.log("Person 2: ", person2);
+
+    // We can't use arrow functions to create objects
+    function Student(name, class_name, roll_no) {
+      this.name = name;
+      this.class_name = class_name;
+      this.roll_no = roll_no;
+    }
+
+    const person3 = new Student("Meet Mulik", "D15B", 15);
+    console.log(person3);
+  </script>
+</html>
